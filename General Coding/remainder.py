@@ -1,4 +1,4 @@
-def modBigNumber(num, m):
+def modBigNumber(num,m):
     # Store the modulus of big number
     vec = []
     mod = 0
@@ -35,8 +35,8 @@ def modBigNumber(num, m):
  
 # Driver Code
 if __name__ == '__main__':
-    num = str(10**23)
-    m = 13
+    num = str(2**2401)
+    m = 7
     modBigNumber(num, m)
  
 # This code is contributed by

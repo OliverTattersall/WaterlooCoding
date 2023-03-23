@@ -1,0 +1,8 @@
+Teams are all initialized
+add_player failed : Team 1 doesn't have enough money
+add_player failed : Team 1 has a full roster
+sell_player failed : Team 2 doesn't have enough money
+sell_player failed : Team 1 has a full roster
+trade_players failed : Team 1 doesn't have enough money
+Team 1 : #101 ($20) #102 ($20) #103 ($20) #104 ($20) #105 ($20) player value = 100 cash = 0
+Team 2 : #200 ($1000) player value = 1000 cash = 0

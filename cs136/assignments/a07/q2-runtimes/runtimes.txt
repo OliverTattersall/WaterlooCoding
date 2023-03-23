@@ -1,0 +1,39 @@
+/////////////////////////////////////////////////////////////////////////////////////////
+// INTEGRITY STATEMENT (v4)
+//
+// By signing your name and ID below you are stating that you have agreed
+// to the online academic integrity statement posted on edX:
+// (Course > Assignments > Assignment Information & Policies > Academic Integrity Policy)
+/////////////////////////////////////////////////////////////////////////////////////////
+// I received help from and/or collaborated with:
+
+// None
+//
+// Name: Oliver Tattersall
+// login ID: omtatter
+//////////////////////////////////////////////////////////////////////////////////////////
+
+
+a) 
+time: O(n) where n is length of string
+justification: 
+Single loop: sum[i=1,..,n - 1]: O(1) 
+             = O(n)
+
+b)
+time: O(n)
+justification: 
+T(n) = O(1) + T(n/2) + T(n/2) = O(1) +2*T(n/2) = O(n)
+
+
+c)
+time: O(nm), where n is the length of str1, m is the length of str2
+justification:
+Inner loop: sum[j=0, ..., m - 1] O(1) = O(m)
+Outer loop: sum[i=0, ..., n - 1] O(m)+ O(m) = O(nm)
+
+d)
+time: O(nlogn)
+justification:
+Inner loop: sum[j=0, ..., n-1] O(1) = O(n)
+Outer loop: sum[i=1, i=4, i=16, ... n] O(n) = O(nlogn) since i can have at most log_4_(n) values ~ log(n)

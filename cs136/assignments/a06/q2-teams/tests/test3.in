@@ -1,0 +1,14 @@
+team 1 10000
+
+add_player 1 100 1000
+add_player 1 101 1000
+add_player 1 102 1000
+add_player 1 103 1000
+add_player 1 104 1000
+
+team 2 10000
+
+sell_player 1 103 2
+
+print 1
+print 2

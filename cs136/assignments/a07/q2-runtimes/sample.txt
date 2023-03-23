@@ -1,0 +1,20 @@
+These are two samples of how to "justify" your solutions.
+
+There is no exact syntax... just provide a brief explanation of how you arrived at your answer.
+
+
+1) A justification of the selection_sort function in lines 7 - 23 of example 6.3.1 would be:
+
+Let n be the length of the array.
+Inner Loop: Sum[j=i..n]:O(1)
+            = O(n)
+Outer Loop: Sum[i=1..n]:O(n)
+            = O(n^2)
+
+
+2) A justification of example 7.2.8 would be:
+
+Let n be the length of the array
+T(n) = O(n) + T(n-1)
+     = O(n^2)
+

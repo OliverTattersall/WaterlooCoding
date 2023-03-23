@@ -1,0 +1,50 @@
+# These are the commands used for I/O-driven testing
+# See public.in and public.expect for more information about
+#   what the input and output should look like.
+
+# Setup/create team 1 with 10000 cash available  
+#   calls team_setup
+team 1 10000
+
+# Example possible outputs from team command
+   //   "Teams are all initialized\n"
+----------------------------------------------------------------------
+# Add a player to team 1 with player id = 100 and value = 1000
+#   calls team_add_player
+add_player 1 100 1000
+
+# Possible messages for add_player command
+  //   "add_player failed : " 
+  //    followed by calling print_reason to print the reason for the failure
+
+----------------------------------------------------------------------
+# Is player with id 100 on team 1
+#   calls team_is_player_on
+is_on 1 100
+
+# Possible messages for is_on command
+  //   "Player %d is on team %d\n"
+  //   "Player %d is not on team %d\n"
+
+----------------------------------------------------------------------
+# Sell player 200 on team 1 to team 2
+#   calls team_sell_player
+sell_player 1 200 2
+
+# Possible messages for sell_player command
+  //   "sell_player failed : "
+  //    followed by calling print_reason to print the reason for the failure
+
+----------------------------------------------------------------------
+# Trade player 100 on team 1 to team 2 in exchange for player 200
+#   calls team_trade_players
+trade_players 1 100 2 200
+
+# Possible messages for trade_players command
+  //   "trade_players failed : "
+  //    followed by calling print_reason to print the reason for the failure
+
+----------------------------------------------------------------------
+# Print team 1
+#   calls team_print
+print 1
