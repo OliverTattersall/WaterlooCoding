@@ -23,6 +23,7 @@ int main(void) {
   int len = 9;
   int a[9] = {5, 6, 1, 9, 3, 7, 8, 2, 4};
   int b[9] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+  int c[16] = {2,2,2,2,1,2,2,2,2,1,22,2,2,2,1,2};
 
   assert(divides_followers(a,len) == 6);
 
@@ -35,5 +36,9 @@ int main(void) {
 
   even_first(b, len);
   assert(is_evens_before_odds(b, len));
+
+  even_first(c, 16);
+  assert(is_evens_before_odds(c, 16));
+
   trace_msg("ALL ASSERTIONS PASSED!")
 }

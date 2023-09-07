@@ -1,0 +1,6 @@
+is_empty
+push hello
+is_empty
+top
+pop
+is_empty
