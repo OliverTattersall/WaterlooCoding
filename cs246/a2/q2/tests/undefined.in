@@ -1,0 +1,20 @@
+create a +infinity
+create b -infinity
+create c 0
+create d undefined
+* a b
+* a a
+- a a 
+- a b 
+- b b 
+- b a 
+* a c
+* b c 
+/ c c 
+/ a b
+/ a d
+u - d
+print a 
+print b 
+print c 
+print d 

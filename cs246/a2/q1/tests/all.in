@@ -1,0 +1,23 @@
+r a 11101/
+r b 10110/
+r c 010101/
+r d 10101/
+pa,
+pb,
+pc,
+pd,
+da
+db
+dc
+dd
++ a 10/
++ b 01/
+pa,
+pb,
+pc,
+pd,
+da
+db
+dc
+dd
+q

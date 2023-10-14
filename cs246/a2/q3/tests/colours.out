@@ -1,0 +1,9 @@
+Dimensions: 6x6
+Number of rectangles: 7
+	[Red (1,1) 4x4]
+	[Green (0,0) 1x1]
+	[Blue (0,0) 1x2]
+	[Yellow (5,5) 1x1]
+	[Orange (1,1) 2x2]
+	[Black (2,4) 2x4]
+	[White (0,0) 3x3]

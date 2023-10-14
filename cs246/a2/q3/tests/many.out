@@ -1,0 +1,15 @@
+Dimensions: 5x5
+Number of rectangles: 3
+	[Blue (1,1) 4x4]
+	[Blue (1,0) 3x4]
+	[Blue (0,1) 3x4]
+Dimensions: 8x11
+Number of rectangles: 4
+	[Blue (1,1) 4x4]
+	[Blue (1,0) 3x4]
+	[Blue (0,1) 3x4]
+	[Blue (10,0) 8x1]
+[Blue (1,1) 4x4]
+[Blue (1,0) 3x4]
+[Blue (0,1) 3x4]
+[Blue (10,0) 8x1]

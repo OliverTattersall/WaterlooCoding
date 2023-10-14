@@ -1,0 +1,15 @@
+create a +infinity
+create b 0
+create c 15
+create d 20
+* c d 
+* d c 
+* b d 
+* b c 
+- d c 
++ d c 
+* a c 
+* a d 
+u- d 
+u- c 
+u- b

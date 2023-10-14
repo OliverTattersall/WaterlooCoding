@@ -1,0 +1,16 @@
+sample
+test1
+double
+empty
+line
+many
+move
+neg 
+rem 
+alot
+colours
+copy
+max
+cassign
+set
+recmove

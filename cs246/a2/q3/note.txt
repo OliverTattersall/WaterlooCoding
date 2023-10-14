@@ -1,0 +1,2 @@
+a command is colour, x, y, then height!!, width
+not width height
