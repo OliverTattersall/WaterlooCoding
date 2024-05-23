@@ -1,0 +1,4 @@
+Since the three basis vectors of $\R^3$ can be formed by a combination of P, Q, and R, then any vector of $\R^3$ can be written as a combination of P,Q, and R.
+$\\$ Therefore an example of an orthonormal basis for $\R^3$ is $\{\frac{1}{||\vec{P}||}*\vec{P}, \frac{1}{||\vec{Q}||}*\vec{Q}, \frac{1}{||\vec{R}||}*\vec{R} \} $
+$$= \{\frac{1}{\sqrt{0^2 + (-1)^2 + 2^2}}*\vec{P}, \frac{1}{\sqrt{0.5^2 + 1^2 + 2^2}}*\vec{Q}, \frac{1}{\sqrt{0^2 + (-1)^2 + 4^2}}*\vec{R} \}$$
+$$= \{\frac{1}{\sqrt{5}}*\begin{bmatrix}0 \\ -1 \\ 2 \end{bmatrix}\,, \frac{1}{\sqrt{5.25}}*\begin{bmatrix}0.5 \\ +1 \\ 2 \end{bmatrix}\,, \frac{1}{\sqrt{17}}*\begin{bmatrix}0 \\ -1 \\ 4 \end{bmatrix}\ \}$$

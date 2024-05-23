@@ -1,13 +1,24 @@
 module binarynum;
 
-struct BinaryNum {
-    int size = 0;         // number of elements the array currently holds
-  int capacity;     // number of elements the array could hold, 
-                    // given current memory allocation to contents
-  bool *contents = nullptr;  
-}
+// bulk
+// while(true){
+//     cin >> tmp;
+//     if(cin == '1'){
+//         tempArr[count] = 1;
+//         count++;
+//     }else if(cin == '0'){
+//         tempArr[count] = 0;
+//         count++;
+//     }else if(cin != ' ' && cin != '\n'){
+//         break;
+//     }
+//     if(count == size){
+//         tempArr = copyover(tempArr, size);
+//         size *= 2;
+//     }
+// }
 
-using namespace std;
+
 
 bool* copyover(bool* old, int oldsize, int newsize){
     bool * res = new bool[newsize];
@@ -25,14 +36,15 @@ bool * readBinChars (int &size, int &count){
     // int count = 0;
     // int size = 4;
     while(true){
-        cin >> tmp;
-        if(cin == '1'){
+        std::cin >> tmp;
+        // std::cout << tmp << std::endl;
+        if(tmp == '1'){
             tempArr[count] = 1;
             count++;
-        }else if(cin == '0'){
+        }else if(tmp == '0'){
             tempArr[count] = 0;
             count++;
-        }else if(cin != ' ' && cin != '\n'){
+        }else if(tmp != ' ' && tmp != '\n'){
             break;
         }
         if(count == size){
@@ -40,6 +52,7 @@ bool * readBinChars (int &size, int &count){
             size *= 2;
         }
     }
+    return tempArr;
 }
 
 BinaryNum readBinaryNum(){
@@ -50,27 +63,15 @@ BinaryNum readBinaryNum(){
     // char tmp;
     int count = 0;
     int size = 4;
-    // while(true){
-    //     cin >> tmp;
-    //     if(cin == '1'){
-    //         tempArr[count] = 1;
-    //         count++;
-    //     }else if(cin == '0'){
-    //         tempArr[count] = 0;
-    //         count++;
-    //     }else if(cin != ' ' && cin != '\n'){
-    //         break;
-    //     }
-    //     if(count == size){
-    //         tempArr = copyover(tempArr, size);
-    //         size *= 2;
-    //     }
-    // }
-    bool * tempArr = readBinChars(count, size);
+    
+    bool * tempArr = readBinChars(size, count);
     res.contents = new bool[size];
+    // std::cout << count << std::endl;
     for(int i = count - 1; i >= 0; --i){
+        // std::cout << tempArr[i];
         res.contents[i] = tempArr[count - 1 - i];
     }
+    
     delete tempArr;
     res.capacity = size;
     res.size = count;
@@ -79,15 +80,27 @@ BinaryNum readBinaryNum(){
 
 }
 
+void printArray(bool * arr, int size){
+    for(int i =0; i < size; i++){
+        std::cout << arr[i] << std::endl;
+    }
+}
+
 void binaryConcat(BinaryNum &binNum) {
     int count = 0;
     int size = 4;
     bool * tempArr = readBinChars(size, count);
-    for(int i = 0; i < count; ++i){
+    // printArray(tempArr, count);
+    // std::cout << count << std::endl;
+    for(int i = 0; i < count / 2; ++i){
         bool temp = tempArr[i];
+        // std::cout << temp << " " << tempArr[count - 1 - i] << std::endl;
         tempArr[i] = tempArr[count - 1 - i];
         tempArr[count - 1 - i] = temp;
+        
     }
+    // i = 0, temp = 1, temp[2-1-0] = 0
+    // printArray(tempArr, count);
     tempArr = copyover(tempArr, size, size + binNum.capacity);
     // if(count + binNum.size >= binNum.capacity){
     //     binNum.contents = copyover(binNum.contents, binNum.size, binNum.size + count);
@@ -123,10 +136,12 @@ int binaryToDecimal(const BinaryNum &binNum) {
 }
 
 void printBinaryNum(std::ostream &out, const BinaryNum &binNum, char sep){
-    for(int i = 0; i < binNum.size - 1; ++i){
-        out << binNum.contents[i] << sep;
+    out << binNum.contents[binNum.size - 1];
+    for(int i = binNum.size - 2; i >= 0; --i){
+        out << sep << binNum.contents[i];
+        // out << "test";
     }
-    out << binNum.contents[binNum.size - 1] << '\n';
+    out <<'\n';
 
 } 
 
